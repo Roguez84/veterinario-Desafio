@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  height: MyString
+  weight: MyString
+  vet_visit_date: 2021-04-21 23:57:43
+  pets: one
+
+two:
+  height: MyString
+  weight: MyString
+  vet_visit_date: 2021-04-21 23:57:43
+  pets: two
