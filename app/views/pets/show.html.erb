@@ -15,5 +15,50 @@
   <%= @pet.date_of_birth %>
 </p>
 
+
+<p>
+  <strong>Peso promedio:</strong>
+  <%= @pet.pet_histories.pluck(:weight).collect { |x| x.to_f}.sum / @pet.pet_histories.count.to_f %>
+  <%=  %>
+</p>
+
+<p>
+  <strong>Altura promedio:</strong>
+  <%= @pet.pet_histories.pluck(:height).collect { |x| x.to_f}.sum / @pet.pet_histories.count.to_f %>
+</p>
+
+<p>
+  <strong>Altura Maxima</strong>
+  <%= @pet.pet_histories.pluck(:height).max %>
+</p>
+
+<p>
+  <strong>Peso Maximo</strong>
+  <%= @pet.pet_histories.pluck(:weight).max %>
+</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <td>Fecha de visita</td>
+      <td>Altura</td>
+      <td>Peso</td>  
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pet.pet_histories.each do |hist| %>
+      <tr>
+        <td><%=hist.vet_visit_date%></td>
+        <td><%=hist.height%></td>
+        <td><%=hist.weight%></td>             
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
 <%= link_to 'Edit', edit_pet_path(@pet) %> |
 <%= link_to 'Back', pets_path %>
