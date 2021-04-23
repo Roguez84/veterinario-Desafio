@@ -64,6 +64,6 @@ class PetHistoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pet_history_params
-      params.require(:pet_history).permit(:height, :weight, :vet_visit_date, :pets_id)
+      params.require(:pet_history).permit(:height, :weight, :vet_visit_date, :pet_id)
     end
 end

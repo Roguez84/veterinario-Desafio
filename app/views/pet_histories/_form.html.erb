@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :pets_id %>
-    <%= form.text_field :pets_id %>
+    <%= form.label :pet_id %>
+    <%= form.select :pet_id, PetHistory.all_pet_names_hash %>
   </div>
 
   <div class="actions">

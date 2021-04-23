@@ -2,6 +2,8 @@
 
 <h1>Pet Histories</h1>
 
+<%= link_to 'Ver todas las mascotas', pets_path %>
+
 <table>
   <thead>
     <tr>
@@ -19,7 +21,7 @@
         <td><%= pet_history.height %></td>
         <td><%= pet_history.weight %></td>
         <td><%= pet_history.vet_visit_date %></td>
-        <td><%= pet_history.pets %></td>
+        <td><%= pet_history.pet.name %></td>
         <td><%= link_to 'Show', pet_history %></td>
         <td><%= link_to 'Edit', edit_pet_history_path(pet_history) %></td>
         <td><%= link_to 'Destroy', pet_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
